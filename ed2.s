@@ -1,5 +1,5 @@
-	.page
-	.subttl   'ed2    ted 01/17/84'
+;	.page
+;	.subttl   'ed2    ted 01/17/84'
 ; ****** scroll routines ******
 ;
 movlin

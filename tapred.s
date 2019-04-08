@@ -1,5 +1,5 @@
-	.page
-	.subttl  'tapred   01/17/84'
+;	.page
+;	.subttl  'tapred   01/17/84'
 ;  *** tape read routines ***
 ;
 ; primitives first...
@@ -797,7 +797,7 @@ gothed
        bit  msgflg     	; r we printing messages?
        bpl  ctlo       	; nope
        jsr  primm
-       .byte $d,'FOUND ',0
+       .byte $d,"FOUND ",0
 
        ldy  #4
 fah55  			; output filename

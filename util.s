@@ -1,5 +1,5 @@
-	.page
-	.subttl 'util'
+;	.page
+;	.subttl 'util'
 ;  parse entry when 1st char has already been read
 ;
 pargot
@@ -27,11 +27,11 @@ par006
 
        cmp #'0         	;check if hex, and convert
        bcc parerr
-       cmp #'g
+       cmp #'G
        bcs parerr
        cmp #':         	;'9'+1
        bcc par010
-       cmp #'a
+       cmp #'A
        bcc parerr
        sbc #8          	;adjust if in a..f
 par010
@@ -244,7 +244,7 @@ rstxy
        ldx savex
        ldy savey
        rts
-	.page
+;	.page
 ;  test stop key in a sane manner & cause no reg alterations...
 ;
 ;  .c=0 => no stopkey,     .c=1 => stopkey pressed

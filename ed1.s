@@ -1,5 +1,5 @@
-	.page
-	.subttl 'ed1    ted 07/10/84'
+;	.page
+;	.subttl 'ed1    ted 07/10/84'
 
 	.byte   >dclver,<dclver	;mark declare version
 
@@ -55,7 +55,7 @@ ldtb1			;screen lines high byte table
        .byte >linz22
        .byte >linz23
        .byte >linz24
-	.page
+;	.page
 scrorg			;return max. # rows, cols of screen
        ldx #llen
        ldy #nlines
@@ -175,18 +175,18 @@ scolor
 ;
 ;
 lp2
-       LDX KYNDX       	;are there any pf keys?
-       BEQ LP3         	;branch if not
-       LDY KEYIDX      	;get index to current char
-       LDA PKYBUF,Y    	;get current byte
-       DEC KYNDX       	;1 byte down
-       INC KEYIDX      	;bump index to next char
-       CLI
-       CLC
-       RTS
-LP3
-       LDY KEYD        	;get key from irq buffer
-       NOP
+       ldx kyndx       	;are there any pf keys?
+       beq lp3         	;branch if not
+       ldy keyidx      	;get index to current char
+       lda pkybuf,y    	;get current byte
+       dec kyndx       	;1 byte down
+       inc keyidx      	;bump index to next char
+       cli
+       clc
+       rts
+lp3
+       ldy keyd        	;get key from irq buffer
+       nop
 ;
 ;*********	end of rev 5 change
 ;
@@ -385,7 +385,7 @@ nvsa
        pla
 nvs1
        jsr dspp        	;fall thru to movchr! (will return to 'loop2')
-	.page
+;	.page
 ; movchr - move to next char position
 ; insert blank line if at end of line
 ; y = column position

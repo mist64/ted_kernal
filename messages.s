@@ -1,15 +1,15 @@
-	.page
-	.subttl 'messages'
-MS1    .BYTE CR,'I/O ERROR ',$A3
-MS5    .BYTE CR,'SEARCHING',$A0
-MS6    .BYTE 'FOR',$A0
-MS7    .BYTE CR,'PRESS PLAY ON TAP',$C5
-MS8    .BYTE 'PRESS RECORD & PLAY ON TAP',$C5
-MS10   .BYTE CR,'LOADIN',$C7
-MS11   .BYTE CR,'SAVING',$A0
-MS21   .BYTE CR,'VERIFYIN',$C7
-MS17   .BYTE CR,'FOUND',$A0
-MS18   .BYTE CR,'OK',$8D
+;	.page
+;	.subttl 'messages'
+ms1    .byte cr,"I/O ERROR ",$a3
+ms5    .byte cr,"SEARCHING",$a0
+ms6    .byte "FOR",$a0
+ms7    .byte cr,"PRESS PLAY ON TAP",$c5
+ms8    .byte "PRESS RECORD & PLAY ON TAP",$c5
+ms10   .byte cr,"LOADIN",$c7
+ms11   .byte cr,"SAVING",$a0
+ms21   .byte cr,"VERIFYIN",$c7
+ms17   .byte cr,"FOUND",$a0
+ms18   .byte cr,"OK",$8d
 
 
 ;print message to screen only if

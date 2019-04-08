@@ -1,5 +1,5 @@
-	.page
-	.subttl 'load'
+;	.page
+;	.subttl 'load'
 ;**********************************
 ;*             load               *
 ;*                                *

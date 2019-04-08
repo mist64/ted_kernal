@@ -1,5 +1,5 @@
-	.page
-	.subttl 'disasm   01/16/84'
+;	.page
+;	.subttl 'disasm   01/16/84'
 disasm
        bcs disa10      	;use a default length from current sa
        jsr t0tot2
@@ -43,7 +43,7 @@ pradr0
        dex
        bpl pradrl      	;pad non-printers
        jsr primm       	;print 3 spaces
-       .byte '   ',0
+       .byte "   ",0
        jmp pradrm
        nop
 pradrl
@@ -215,9 +215,9 @@ nmode2
        .byte $91,$92,$86,$4a
        .byte $85,$9d
 char1
-       .byte ',),#($'
+       .byte ",),#($"
 char2
-       .byte 'Y',0,'X$$',0
+       .byte "Y",0,"X$$",0
 mneml
        .byte $1c,$8a,$1c,$23
        .byte $5d,$8b,$1b,$a1

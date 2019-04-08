@@ -1,5 +1,5 @@
-	.page
-	.subttl 'save'
+;	.page
+;	.subttl 'save'
 ;***********************************
 ;*             save                *
 ;*                                 *

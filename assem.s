@@ -1,5 +1,5 @@
-       .page
-	.subttl 'assem'
+;       .page
+;	.subttl 'assem'
 ;  simple assembler
 ;  syntax:      a 1111 lda ($00,x)
 ;               a 1111 dex:               (':' = terminator)
@@ -160,7 +160,7 @@ as500
        lda length
        jsr addt2       	;update address
 
-       lda #'a         	;set up next line with 'a nnnn ' for convience
+       lda #'A         	;set up next line with 'a nnnn ' for convience
        sta keyd        	;put it in the keyboard buffer
        lda #$20
        sta keyd+1
@@ -212,9 +212,9 @@ tst10
 ;  if 0<=char<=f then carry=0
 ;
 chrtst
-       cmp #'a
+       cmp #'A
        bcc chr10       	;must be 0-9
-       cmp #'g
+       cmp #'G
        rts
 chr10
        cmp #'0

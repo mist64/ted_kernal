@@ -1,11 +1,11 @@
-	.page
-	.subttl  'vectors  02/17/84'
-	*=$ff4c
+;	.page
+;	.subttl  'vectors  02/17/84'
+	.segment "ff4c"
        jmp print       	;**must be here**... basic needs this jump
        jmp primm       	;**must be here**... basic needs this jump
        jmp entry       	;**must be here**... basic needs this jump
 
-	*=$ff80
+	.segment "ff80"
 	.if   palmod
 	.byte revnum+$80 ;release number of ted kernal (msb=1=pal version)
 	.else
@@ -51,7 +51,7 @@ judtim jmp udtim       	;increment clock
 jscrog jmp scrorg      	;screen org
 jplot  jmp plot        	;read/set x,y coord
        jmp iobase
-	.page
+;	.page
 ; the following code is necessary to prevent the problem where
 ; the reset button is pressed while the rom is banked out. since
 ; the ted chip has no reset pin, the processor will attempt to
@@ -63,7 +63,7 @@ jplot  jmp plot        	;read/set x,y coord
 gostrt
        sta romon
        jmp start
-	.wor   gostrt          	;initialization code
-	.wor   puls            	;interrupt handler
+	.word   gostrt          	;initialization code
+	.word   puls            	;interrupt handler
 
 ;end

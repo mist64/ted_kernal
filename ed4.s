@@ -1,5 +1,5 @@
-	.page
-	.subttl   'ed.4    ted 01/16/84'
+;	.page
+;	.subttl   'ed.4    ted 01/16/84'
 ; print a character on the screen
 ;
 print

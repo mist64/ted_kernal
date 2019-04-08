@@ -1,5 +1,5 @@
-	.page
-	.subttl 'rs232'
+;	.page
+;	.subttl 'rs232'
 ; interrupt handler
 ;
 aout
@@ -83,7 +83,7 @@ notacc
 
 ; hit high water mark, tell sender to stop
 
-       lda  xoff       : x-sw is off
+       lda  xoff       ; x-sw is off
        beq  nohw
        sta  soutq      	; ~s
        lda  #$ff

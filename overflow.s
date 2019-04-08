@@ -1,16 +1,16 @@
-	.page
-	.subttl 'overflow'
+;	.page
+;	.subttl 'overflow'
 msgs=*
 msgmon=*-msgs
-       .BYTE CR,'MONITOR',$8D 
-MSGBRK=*-MSGS
-       .BYTE CR,'BREA',$CB
-MSGREG=*-MSGS
-       .BYTE CR,'   PC  SR AC XR YR SP',CR,';',$A0
-MSGASM=*-MSGS
-       .BYTE 'A',$A0
-MSGVER=*-MSGS
-       .BYTE ' ERRO',$D2
+       .byte cr,"MONITOR",$8d
+msgbrk=*-msgs
+       .byte cr,"BREA",$cb
+msgreg=*-msgs
+       .byte cr,"   PC  SR AC XR YR SP",cr,";",$a0
+msgasm=*-msgs
+       .byte "A",$a0
+msgver=*-msgs
+       .byte " ERRO",$d2
 
 msgxxx
        lda msgs,x

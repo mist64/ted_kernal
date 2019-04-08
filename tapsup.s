@@ -1,5 +1,5 @@
-	.page
-	.subttl 'tape support'
+;	.page
+;	.subttl 'tape support'
 ; if cas plat sw is not pressed give message & wait until pressed
 ; entry to test sw for record:
 ;
@@ -13,14 +13,14 @@ tstply
        beq  pok
        php
        jsr  primm
-       .byte cr,'PRESS PLAY ',0
+       .byte cr,"PRESS PLAY ",0
        plp
        bcc  qq2
        jsr  primm
-       .byte '& RECORD ',0
+       .byte "& RECORD ",0
 qq2
        jsr  primm
-       .byte 'ON TAPE',0
+       .byte "ON TAPE",0
 
 waitpl
        jsr  tstsky     	; does user want to play some more?
@@ -29,7 +29,7 @@ waitpl
        and  #4
        bne  waitpl     	; play still not down
        jsr  primm      	; finally!
-       .byte cr,'OK',0
+       .byte cr,"OK",0
 pok
        clc             	; everything's fine
 pabort 			; ooops
@@ -93,7 +93,7 @@ md1				;  to do skewed servo
        rts
 
 
-       .byte  'C1984COMMODORE'
+       .byte  "C1984COMMODORE"
 
 
 ; turn motor off

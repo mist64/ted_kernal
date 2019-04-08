@@ -1,5 +1,5 @@
-	.page
-	.subttl 'ed.7    ted 12/09/83'
+;	.page
+;	.subttl 'ed.7    ted 12/09/83'
 keycod 					;keyboard mode 'dispatch'
        .word mode1
        .word mode2
@@ -306,7 +306,7 @@ contrl
 	.byte   $ff             	; stop
 	.byte   $ff             	;end of table null
 
-runtb  .byte $44,$cc,$22,$2a,cr,'RUN',cr 	;dload '* : run
+runtb  .byte $44,$cc,$22,$2a,cr,"RUN",cr 	;dload '* : run
 
 coltab
        .byte $90,$05,$1c,$9f,$9c,$1e,$1f,$9e

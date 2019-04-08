@@ -1,5 +1,5 @@
-	.page
-	.subttl  'banking'
+;	.page
+;	.subttl  'banking'
 ;***********************************************************************
 ;
 ;                 software supporting banking hardware
@@ -50,8 +50,8 @@ poll50
        bpl poll20
        rts
 
-cbmmsg .byte 'CBM'
-	.page
+cbmmsg .byte "CBM"
+;	.page
 ;*************************************************
 ;
 ; call every active cartridges cold start routine.
@@ -84,7 +84,7 @@ phen3
        rts
 
 dblx   .byte %00000000,%00000101,%00001010,%00001111
-	.page
+;	.page
 ;***********************************************
 ; fetch a byte long
 ;    entry:
@@ -102,7 +102,7 @@ fetchl
        lda (fetptr),y
        sta bnksel,x
        rts
-	.page
+;	.page
 ;***********************************************************************
 ; call a subroutine in another bank
 ;     enter with:
@@ -138,7 +138,7 @@ long
 
 lngrt1
        jmp (lngjmp)
-	.page
+;	.page
 ;***********************************************************************
 ;
 ; long irq routine.
@@ -182,13 +182,13 @@ irqret
        tax
        pla
        rti
-	.page
+;	.page
 gobvec
        ldx curbnk
        sta $fdd0,x
        jmp (bnkvec)
 
-	*=$fcf1		;jump table for banking routines
+	.segment "fcf1"		;jump table for banking routines
        jmp gobvec
        jmp phenix
        jmp fetchl

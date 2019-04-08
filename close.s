@@ -1,5 +1,5 @@
-	.page
-	.subttl 'close'
+;	.page
+;	.subttl 'close'
 ;***************************************
 ;* close -- close logical file         *
 ;*                                     *

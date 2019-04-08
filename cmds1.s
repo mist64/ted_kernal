@@ -1,5 +1,5 @@
-	.page
-	.subttl 'cmds1   02/17/84'
+;	.page
+;	.subttl 'cmds1   02/17/84'
 ;**********************************************
 ;
 ;   monitor with mini-assembler/disassembler
@@ -194,41 +194,41 @@ go15
 
 
 
-CMDCHR
-       .BYTE 'X'        	;JUMP TO BASIC WARM START
-       .BYTE 'M'        	;MEMORY DUMP
-       .BYTE 'R'        	;DISPLAY REGS
-       .BYTE 'G'        	;GO
-       .BYTE 'T'        	;TRANSFER
-       .BYTE 'C'        	;COMPARE
-       .BYTE 'D'        	;DISASSEMBLE
-       .BYTE 'A'        	;ASSEMBLE
-       .BYTE '.'        	;ASSEMBLE, ALSO
-       .BYTE 'H'        	;HUNT
-       .BYTE 'F'        	;FILL
-       .BYTE '>'        	;SET MEMORY
-       .BYTE ';'		;SET REGS
+cmdchr
+       .byte 'X'        	;jump to basic warm start
+       .byte 'M'        	;memory dump
+       .byte 'R'        	;display regs
+       .byte 'G'        	;go
+       .byte 'T'        	;transfer
+       .byte 'C'        	;compare
+       .byte 'D'        	;disassemble
+       .byte 'A'        	;assemble
+       .byte '.'        	;assemble, also
+       .byte 'H'        	;hunt
+       .byte 'F'        	;fill
+       .byte '>'        	;set memory
+       .byte ';'		;set regs
 
-CMDLS=*-CMDCHR			;L,S & V MUST BE LAST IN TABLE
-       .BYTE 'L'        	;LOAD MEMORY
-       .BYTE 'S'        	;SAVE MEMORY
-       .BYTE 'V'        	;VERIFY MEMORY
-CMDQTY=*-CMDCHR
+cmdls=*-cmdchr			;l,s & v must be last in table
+       .byte 'L'        	;load memory
+       .byte 'S'        	;save memory
+       .byte 'V'        	;verify memory
+cmdqty=*-cmdchr
 
 cmdtbl
-       .wor $8003-1    		;use basic's warm start vector
-       .wor dspmem-1
-       .wor dspreg-1
-       .wor go-1
-       .wor trnsfr-1
-       .wor compar-1
-       .wor disasm-1
-       .wor assem-1
-       .wor assem-1
-       .wor hunt-1
-       .wor fill-1
-       .wor setmem-1
-       .wor setreg-1
+       .word $8003-1    		;use basic's warm start vector
+       .word dspmem-1
+       .word dspreg-1
+       .word go-1
+       .word trnsfr-1
+       .word compar-1
+       .word disasm-1
+       .word assem-1
+       .word assem-1
+       .word hunt-1
+       .word fill-1
+       .word setmem-1
+       .word setreg-1
 
 
 dmpone

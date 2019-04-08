@@ -1,5 +1,5 @@
-	.page
-	.subttl 'tape write'
+;	.page
+;	.subttl 'tape write'
 ;   *** tape write routines ***
 ;
 ; primitives first...

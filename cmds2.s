@@ -1,5 +1,5 @@
-	.page
-	.subttl 'cmds2   02/07/84'
+;	.page
+;	.subttl 'cmds2   02/07/84'
 ; hunt for bytes or string
 ; syntax:  h 0000 1111 'af...   <or>   h 0000 1111 22 33 44 ...
 
@@ -53,7 +53,7 @@ ht100
        jsr dect1       	;decrement byte counter
        bcs ht85        	;loop if not done
        bcc tnsf98      	;goto 'main'
-	.page
+;	.page
 ; load/save/verify
 ;
 ; l {"name"} {,device-number}
@@ -117,7 +117,7 @@ l8
        ldx t0          	;pickup end addr
        ldy t0+1
        lda cmpflg
-       cmp #'s         	;check that this is a save
+       cmp #'S         	;check that this is a save
        bne errl
        lda #0
        sta sa
@@ -128,9 +128,9 @@ l999
 
 l5
        lda cmpflg      	;check for load
-       cmp #'v         	;..or verify
+       cmp #'V         	;..or verify
        beq l6
-       cmp #'l
+       cmp #'L
        bne errl
        lda #0          	;flag load
 l6
@@ -139,7 +139,7 @@ l6
        and #$10
        beq l999        	;ok to cont.
        lda cmpflg      	;l & v have diff. err. msgs
-       cmp #'l
+       cmp #'L
        beq errl
        ldx #msgver
        jsr msgxxx

@@ -1,5 +1,5 @@
-	.page
-	.subttl 'close all files'
+;	.page
+;	.subttl 'close all files'
 ;*************************************
 ;* clall -- close all logical files  *
 ;* deletes all table entries and     *

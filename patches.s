@@ -1,5 +1,5 @@
-	.page
-	.subttl  'patches   02/17/84'
+;	.page
+;	.subttl  'patches   02/17/84'
 ;  ** clppat **   fixes:  open4,4 <cr> cmd4 <cr> list <cr> problem
 ;                 from 'ed.1'
 ;

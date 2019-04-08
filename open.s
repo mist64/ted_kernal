@@ -1,5 +1,5 @@
-	.page
-	.subttl 'open'
+;	.page
+;	.subttl 'open'
 ;***********************************
 ;*                                 *
 ;* open function                   *

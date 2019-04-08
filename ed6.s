@@ -1,5 +1,5 @@
-	.page
-	.subttl 'ed.6    ted 12/09/83'
+;	.page
+;	.subttl 'ed.6    ted 12/09/83'
 ; grab a character
 
 get1ch
@@ -127,7 +127,7 @@ nxtchr
        ldy pntr
        cpy scrt        	;are we at the right margin?
        bcc bumpnt      	;branch if not
-	.space 1
+;	.space 1
        jsr nxln        	;point to nextline
        ldy sclf        	;point to first char of 1st line
        dey

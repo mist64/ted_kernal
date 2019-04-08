@@ -1,5 +1,5 @@
-	.page
-	.subttl 'ed.5    ted 12/09/83'
+;	.page
+;	.subttl 'ed.5    ted 12/09/83'
 ;************************************************************
 ;*
 ;*  routines involved in executing escape functions
@@ -12,7 +12,7 @@
 escape
        and #$7f
        sec
-       sbc #'a         	;table begins at ascii 'a' & ends at 'w'
+       sbc #'A         	;table begins at ascii 'a' & ends at 'w'
        cmp #$17        	;'w'-'a'+1
        bcs none        	;invalid char...ignore it!
 
@@ -51,7 +51,7 @@ escvct
        .word none-1    	;u underscore cursor
        .word suup-1    	;v scroll up
        .word sddn-1    	;w scroll down
-	.page
+;	.page
 ;*****************************
 ;
 ;  window modes

@@ -1,5 +1,5 @@
-	.page
-	.subttl  'ed.3  ted 01/18/84'
+;	.page
+;	.subttl  'ed.3  ted 01/18/84'
 ; ****** general keyboard scan ******
 ;
 scnkey
@@ -70,7 +70,7 @@ keyscn			;** 01/17/84 mod for new keyboard port
        sta keybrd
        lda keybrd
        rts
-	.page
+;	.page
 ; shift logic
 ;
 shflog

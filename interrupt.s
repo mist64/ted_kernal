@@ -1,5 +1,5 @@
-	.page
-	.subttl 'interrupt   01/16/84'
+;	.page
+;	.subttl 'interrupt   01/16/84'
 ;*******************************
 ;
 ;  irq / break service routine

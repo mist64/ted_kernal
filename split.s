@@ -1,5 +1,5 @@
-	.page
-	.subttl 'split  01/24/84'
+;	.page
+;	.subttl 'split  01/24/84'
 ;**********************************************************
 ;
 ;      split   -     service split screen

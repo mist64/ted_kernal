@@ -1,5 +1,5 @@
-	.page
-	.subttl 'music'
+;	.page
+;	.subttl 'music'
 domus
        ldx #1          	;service tone generators
 domus0

@@ -1,5 +1,5 @@
-	.page
-	.subttl 'channelio'
+;	.page
+;	.subttl 'channelio'
 ;***************************************
 ;* getin -- get character from channel *
 ;* channel is determined by dfltn.     *
@@ -108,7 +108,7 @@ notovr
        pla             	;chr to be returned
        clc             	;sucess flag
        rts
-	.page
+;	.page
 ;***************************************
 ;* bsout -- out character to channel   *
 ;* determined by variable dflto:       *
@@ -171,7 +171,7 @@ boa
        jsr aputch      	;input a char to queue
 boa1
        jmp rstaxy
-	.page
+;	.page
 ;  ***** tedisk support routines... {channel i/o} *****
 ;
 tacptr

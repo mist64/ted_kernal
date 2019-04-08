@@ -1,5 +1,5 @@
-	.page
-	.subttl 'serial'
+;	.page
+;	.subttl 'serial'
 ;  command serial bus device to talk
 ;
 talk

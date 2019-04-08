@@ -1,5 +1,5 @@
-	.page
-	.subttl  'init  (kernal)  02/17/84'
+;	.page
+;	.subttl  'init  (kernal)  02/17/84'
 ;****************************************
 ;
 ;   start  -  all kernal initialization
@@ -67,14 +67,14 @@ movos3
        rts
 
 vectss
-       .wor ntime,srvirq,entbrk
-       .wor nopen,nclose,nchkin
-       .wor nckout,nclrch,nbasin
-       .wor nbsout,nstop,ngetin
-       .wor nclall,entbrk
-       .wor nload,nsave
+       .word ntime,srvirq,entbrk
+       .word nopen,nclose,nchkin
+       .word nckout,nclrch,nbasin
+       .word nbsout,nstop,ngetin
+       .word nclall,entbrk
+       .word nload,nsave
 vectse
-	.page
+;	.page
 ;************************************
 ;
 ;  ioinit - initialize i/o
@@ -136,7 +136,7 @@ table
        .byte $75        	;23:    bkgd 2, ful lum, lt. green (not used)
        .byte $77        	;24:    bkgd 3, ful lum, yellow (not used)
        .byte $6e        	;25:    exterior (ful lum)-1, dk. blue
-	.page
+;	.page
 ;*****************************************
 ;
 ;  ramtas - memory size check and set
@@ -241,23 +241,23 @@ pfktbl
        .byte key8-key7
        .byte pfkend-key8
 key1
-       .BYTE 'GRAPHIC'
-KEY2
-       .BYTE 'DLOAD',34
-KEY3
-       .BYTE 'DIRECTORY',CR
-KEY4
-       .BYTE 'SCNCLR',CR
-KEY5
-       .BYTE 'DSAVE',34
-KEY6
-       .BYTE 'RUN',CR
-KEY7
-       .BYTE 'LIST',CR
-KEY8
-       .BYTE 'HELP',CR
+       .byte "GRAPHIC"
+key2
+       .byte "DLOAD",34
+key3
+       .byte "DIRECTORY",cr
+key4
+       .byte "SCNCLR",cr
+key5
+       .byte "DSAVE",34
+key6
+       .byte "RUN",cr
+key7
+       .byte "LIST",cr
+key8
+       .byte "HELP",cr
 pfkend
-	.page
+;	.page
 setnam
        sta fnlen       	;set up filename
        stx fnadr

@@ -1,5 +1,5 @@
-	.page
-	.subttl  'openchannel'
+;	.page
+;	.subttl  'openchannel'
 ;***************************************
 ;* chkin -- open channel for input     *
 ;*                                     *
@@ -70,7 +70,7 @@ opcasi
        cpx #$60        	;is command a read?
        beq jx320       	;yes
        jmp error6
-	.page
+;	.page
 ;***************************************
 ;* chkout -- open channel for output   *
 ;*                                     *
@@ -142,7 +142,7 @@ optapo
        cpx #$60        	;read?
        beq ck20        	;yes...bad!
        bne ck30        	;always
-	.page
+;	.page
 ;***** tedisk support routines... {state transition} *****
 
 tstkdy
