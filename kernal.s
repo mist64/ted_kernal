@@ -1,7 +1,6 @@
 	.feature labels_without_colons, pc_assignment, missing_char_term
 ;	.nam ted_kernal
 
-	.include   "disclaim.s"
 	.include   "declare.s"
 
 true	=-1
