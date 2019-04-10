@@ -1,11 +1,11 @@
 ;	.page
 ;	.subttl  'vectors  02/17/84'
-	.segment "ff4c"
+	.segment "basvectors"
        jmp print       	;**must be here**... basic needs this jump
        jmp primm       	;**must be here**... basic needs this jump
        jmp entry       	;**must be here**... basic needs this jump
 
-	.segment "ff80"
+	.segment "vectors"
 	.if   palmod
 	.byte revnum+$80 ;release number of ted kernal (msb=1=pal version)
 	.else

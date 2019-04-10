@@ -61,7 +61,7 @@ lf	=$0a		;line feed
 ;  basic zp storage
 ;
 
-	.segment "s0" : zeropage
+	.segment "zp1" : zeropage
 
 pdir	.res 1		;6510 port data dir reg
 port	.res 1		;6510 internal i/o port
@@ -221,7 +221,7 @@ vtemp2	.res 1
 
 ;  kernal zp storage
 ;
-	.segment "s90" : zeropage
+	.segment "zp2" : zeropage
 status	.res 1		;i/o operation status byte
 stkey	.res 1		;stop key flag
 spverr	.res 1		;temporary
@@ -311,7 +311,7 @@ sedt2	.res 1		;editor temp. use
 
 
 
-	.segment "sff"
+	.segment "tmpstack"
 lofbuf	.res 1
 fbuffr	.res 16
 
@@ -321,7 +321,7 @@ savex	.res 1		;...for save & restore
 colkey	.res 16		;default color/luminance table
 sysstk			;bottom of system stack
 ;	.page
-	.segment "s200"
+	.segment "buffer"
 buf	.res buflen	;basic/monitor buffer
 oldlin	.res 2		;basic storage
 oldtxt	.res 2		;basic storage
@@ -501,7 +501,7 @@ vtemp5	.res 1
 adray1	.res 2		;ptr to routine:  convert float -> integer
 adray2	.res 2		;ptr to routine:  convert integer -> float
 ;	.page
-	.segment "s2fe"
+	.segment "vars"
 
 bnkvec	.res 2		;vector for function cart. users
 ierror	.res 2		;indirect error (output error in .x)

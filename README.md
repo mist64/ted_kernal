@@ -56,3 +56,26 @@ This makes it a great base for custom TED KERNALs.
 * There are two minor differences to the original KERNAL images:
 	* In the original KERNAL image, $FF49 contains the bytes $4C, $C2, $B7. It is unknown what they mean.
 	* In the original KERNAL image, $FF7F contains $5e (PAL) and $c4 (NTSC). This is probably the checksum, and it's not included in this build.
+
+# Modifying
+
+The code is split up into the following sections:
+
+* lokernal
+* editor
+* serial
+* tape
+* rs232
+* io
+* init
+* monitor
+* banking
+* bankvectors
+* basvectors
+* vectors
+
+These sections will always be linked to their original addresses, so if you want to remove "tape" or "monitor", for example, the other sections will still remain where they should be in the image.
+
+# Credits
+
+This version is maintained by Michael Steil <mist64@mac.com>, [www.pagetable.com](https://www.pagetable.com/)

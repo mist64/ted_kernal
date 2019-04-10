@@ -188,7 +188,7 @@ gobvec
        sta $fdd0,x
        jmp (bnkvec)
 
-	.segment "fcf1"		;jump table for banking routines
+	.segment "bankvectors"		;jump table for banking routines
        jmp gobvec
        jmp phenix
        jmp fetchl

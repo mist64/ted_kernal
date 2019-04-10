@@ -1,8 +1,8 @@
 all: kernal
 
 kernal:
-	ca65 kernal.s
-	ld65 -C kernal.cfg kernal.o
+	ca65 -g kernal.s
+	ld65 -C kernal.cfg kernal.o -Ln labels.txt
 
 full: kernal
 	dd if=kernal.318004-05.bin bs=1 count=3584 > kernal.bin
@@ -11,4 +11,4 @@ full: kernal
 	cat hikernal.bin >> kernal.bin
 
 clean:
-	rm -f kernal.o lokernal.bin hikernal.bin kernal.bin
+	rm -f kernal.o lokernal.bin hikernal.bin kernal.bin labels.txt
